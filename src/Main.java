@@ -11,59 +11,33 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
             int age = 18;
-            if (age>=18) {
-                System.out.println("Если возраст человека равен 18, то он совершеннолетний");
-            }
-            int age1 = 17;
-            if (age1>=18) {
-                System.out.println("Если возраст человека равен 18, то он совершеннолетний");
+            if (age >= 18) {
+                System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний.");
             } else {
-                System.out.println("Если возраст человека равен 17, то он  еще  не достиг совершеннолетия," +
-                        " но нужно немного подождать");
+                System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать.");
             }
-            int t = 4;
-            if (t<5) {
-                System.out.println("Пора надеть шапку");
-            }
-
-            int t2 = 6;
-            if (t2>5) {
-                System.out.println("Сегодня тепло - можно идти без шапки ");
-            }
-            int speed = 70;
-            if (speed>60) {
-                System.out.println("Если скорость " + speed +  "  км /ч, то водителю придется заплатить штраф" );
-            }
-            int speedАllowed = 50;
-            if (speedАllowed < 60) {
-                System.out.println("Если скорость " + speedАllowed +  "  км /ч, то водителю  можно ехать спокойно");
-            }
-            int ageFrom2To6 =  2;
-            if (ageFrom2To6>=2 && ageFrom2To6 <6) {
-                System.out.println("Если возраст человека равен " + ageFrom2To6+   ", то ему нужно ходить  в детский сад");
+            int t = 5;
+            if (t < 5) {
+                System.out.println("На улице " + t + " градусов, нужно надеть шапку.");
             } else {
-                System.out.println("Ему не нужно ходить в детский сад");
+                System.out.println("На улице " + t + " градусов, можно идти без шапки.");
             }
-
-            int ageFrom7To18 =  7;
-            if (ageFrom7To18>=7 && ageFrom7To18 < 18) {
-                System.out.println("Если возраст человека равен " + ageFrom7To18+   ", то ему нужно ходить  в школу");
+            int speed = 60;
+            if (speed > 60) {
+                System.out.println("Если скорость " + speed + ", то придется заплатить штраф.");
             } else {
-                System.out.println("Ему не нужно ходить в школу");
+                System.out.println("Если скорость " + speed + ", то можно ездить спокойно.");
             }
-
-            int ageFrom18To24 =  18;
-            if (ageFrom18To24>=18 && ageFrom18To24 < 24) {
-                System.out.println("Если возраст человека равен " + ageFrom18To24+   ", то ему нужно ходить в университет");
+            if (age >= 2 && age <= 6) {
+                System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад.");
+            } else if (age >= 7 && age <= 17) {
+                System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу.");
+            } else if (age >= 18 && age <= 24) {
+                System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в университет.");
+            } else if (age > 24) {
+                System.out.println("Если возраст человека равен " + age + ", то ему пора ходить на работу.");
             } else {
-                System.out.println("Ему не нужно ходить в университет");
-            }
-
-            int ageFromMoreThan24  =  25;
-            if (ageFromMoreThan24>24 ) {
-                System.out.println("Если возраст человека равен " + ageFromMoreThan24 +   ", то ему нужно ходить на работу");
-            } else {
-                System.out.println("Ему не нужно ходить на работу");
+                System.out.println("Возраст должен быть 2 года или больше.");
             }
             int ageFromLessThan5   =  4;
             if (ageFromLessThan5<5 ) {
@@ -87,28 +61,29 @@ public class Main {
                 System.out.println("Если меньше 14 лет, то может кататься, но в  сопровождении взрослого ");
             }
             int place = 0;
-            if (place  >  60) {
-                System.out.println("Если место под номером " + place  +   ", то   место стоячее");
+            if (place > 60) {
+                System.out.println("Если место под номером " + place + ", то   место стоячее");
             }
-            if (place  <= 60 && place != 0) {
+            if (place <= 60 && place != 0) {
                 System.out.println("Если место под номером " + place + ", то   место сидячее");
-            }   else {
-                System.out.println("Если мест " + place +  ", то вагон уже полностью забит ");
+            } else {
+                System.out.println("Если мест " + place + ", то вагон уже полностью забит ");
             }
             int One = 10;
-            int Two = 2;
-            int Three = 3;
-
-            if (One>Two && One>Three) {
-                System.out.println("Максимальное число равное " + One );
+            int Two = 20;
+            int Three = 15;
+            int max;
+            if (One >= Two && One >= Three) {
+                max = One;
+            } else if (Two >= One && Two >= Three) {
+                max = Two;
+            } else {
+                max = Three;
             }
-            else if (Two>One && Two>Three) {
-                System.out.println("Максимальное число равное " + Three );
-            }
-            else if  (Three>One && Three>Two) {
-                System.out.println("Максимальное число равное " + Three );
-            }
+            System.out.println("Наибольшее число: " + max);
         }
-    }
-}
+            }
+
+        }
+
 
