@@ -69,16 +69,16 @@ public class Main {
             } else {
                 System.out.println("Если мест " + place + ", то вагон уже полностью забит ");
             }
-            int One = 10;
-            int Two = 20;
-            int Three = 15;
+            int one = 10;
+            int two = 20;
+            int three = 15;
             int max;
-            if (One >= Two && One >= Three) {
-                max = One;
-            } else if (Two >= One && Two >= Three) {
-                max = Two;
+            if (one >= two && one >= three) {
+                max = one;
+            } else if (two >= one && two >= three) {
+                max = two;
             } else {
-                max = Three;
+                max = three;
             }
             System.out.println("Наибольшее число: " + max);
         }
